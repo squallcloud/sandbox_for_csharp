@@ -1,2 +1,2 @@
-# Sandbox_forCsharp
+﻿# sandbox_for_csharp
 C#用サンドボックス

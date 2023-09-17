@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace feature_sample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ExSpan.Exec();
+        }
+    }
+
+}

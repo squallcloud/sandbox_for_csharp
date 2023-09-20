@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            ExSpan.Exec();
+            var ex_list = new List<ExBase>() {
+                new ExSpan(),
+            };
+
+            ex_list.ForEach(ex => {
+                ex.Exec();
+            });
         }
     }
 

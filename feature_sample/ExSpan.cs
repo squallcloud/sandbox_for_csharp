@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace feature_sample
 {
-    internal static class ExSpan
+    internal class ExSpan : ExBase
     {
-        public static void Exec()
+        public void Exec()
         {
             var array = new int[8];
 

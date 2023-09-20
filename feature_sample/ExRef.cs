@@ -18,6 +18,20 @@ namespace feature_sample
             public int value;
         }
 
+        public struct HogeHoge
+        {
+            public int value;
+
+            //通常のstructでは、refは持てない
+            //public ref int refValue;
+        }
+
+        public ref struct FooFoo
+        {
+            public int value;
+            public ref int refValue;
+        }
+
         Foo m_FooValue;
         public Foo fooValue => m_FooValue;
         public ref Foo refFooValue => ref m_FooValue;
@@ -51,6 +65,15 @@ namespace feature_sample
             //↓参照なので、書き換えできる。
             refFooValue.value = 1;
             Console.WriteLine($"refFooValue.value = {refFooValue.value}");
+
+            int value = 1;
+            var foo_foo_val = new FooFoo() {
+                refValue = ref value,//参照
+            };
+            value = 2;//refValue で取得できる値も変わる。
+            Console.WriteLine($"foo_foo_val.refValue = {foo_foo_val.refValue}");
+            foo_foo_val.refValue = 4;//value の値が変わる。
+            Console.WriteLine($"value = {value}");
         }
     }
 }

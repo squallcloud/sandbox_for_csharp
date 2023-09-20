@@ -6,6 +6,7 @@
         {
             var ex_list = new List<ExBase>() {
                 new ExSpan(),
+                new ExRef(),
             };
 
             ex_list.ForEach(ex => {

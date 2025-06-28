@@ -11,4 +11,10 @@
     <PackageReference Include="Tomlyn" Version="0.15.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="sample.toml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
